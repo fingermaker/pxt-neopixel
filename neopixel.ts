@@ -192,7 +192,7 @@ namespace neopixel {
         //% blockId="neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
         //% weight=59
         //% parts="neopixel" advanced=true
-        setBrightness(brightness: number): void {
+        setBrigthness(brightness: number): void {
             this.brightness = brightness & 0xff;
         }
 
@@ -275,25 +275,6 @@ namespace neopixel {
             this.pin = pin;
             pins.digitalWritePin(this.pin, 0);
             // don't yield to avoid races on initialization
-        }
-
-        /**
-         * Estimates the electrical current (mA) consumed by the current light configuration.
-         */
-        //% weight=9 blockId=neopixel_power block="%strip|power (mA)"
-        //% advanced=true
-        power(): number {
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            const end = this.start + this._length;
-            let p = 0;
-            for (let i = this.start; i < end; ++i) {
-                const ledoffset = i * stride;
-                for (let j = 0; j < stride; ++j) {
-                    p += this.buf[i + j];
-                }
-            }
-            return this.length() / 2 /* 0.5mA per neopixel */
-                + (p * 433) / 10000; /* rought approximation */
         }
 
         private setBufferRGB(offset: number, red: number, green: number, blue: number): void {
@@ -394,7 +375,7 @@ namespace neopixel {
         strip.start = 0;
         strip._length = numleds;
         strip._mode = mode;
-        strip.setBrightness(255)
+        strip.setBrigthness(255)
         strip.setPin(pin)
         return strip;
     }
