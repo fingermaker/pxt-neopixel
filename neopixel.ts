@@ -2,23 +2,23 @@
  * Well known colors for a NeoPixel strip
  */
 enum NeoPixelColors {
-    //% block=红色
+    //% block=red
     Red = 0xFF0000,
-    //% block=橙色
+    //% block=orange
     Orange = 0xFFA500,
-    //% block=黄色
+    //% block=yellow
     Yellow = 0xFFFF00,
-    //% block=绿色
+    //% block=green
     Green = 0x00FF00,
-    //% block=蓝色
+    //% block=blue
     Blue = 0x0000FF,
-    //% block=靛蓝
+    //% block=indigo
     Indigo = 0x4b0082,
-    //% block=紫罗兰
+    //% block=violet
     Violet = 0x8a2be2,
-    //% block=紫色
+    //% block=purple
     Purple = 0xFF00FF,
-    //% block=白色
+    //% block=white
     White = 0xFFFFFF
 }
 
@@ -60,7 +60,7 @@ namespace neopixel {
          * Shows all LEDs to a given color (range 0-255 for r, g, b). 
          * @param rgb RGB color of the LED
          */
-        //% blockId="neopixel_set_strip_color" block="%strip|设置颜色为 %rgb=neopixel_colors" 
+        //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors" 
         //% weight=85 blockGap=8
         //% parts="neopixel"
         showColor(rgb: number) {
@@ -73,7 +73,7 @@ namespace neopixel {
          * @param startHue the start hue value for the rainbow, eg: 1
          * @param endHue the end hue value for the rainbow, eg: 360
          */
-        //% blockId="neopixel_set_strip_rainbow" block="%strip|从序号 %startHue|到 %endHue"号七彩显示 
+        //% blockId="neopixel_set_strip_rainbow" block="%strip|show rainbow from %startHue|to %endHue" 
         //% weight=85 blockGap=8
         //% parts="neopixel"
         showRainbow(startHue: number = 1, endHue: number = 360) {
@@ -192,7 +192,7 @@ namespace neopixel {
         //% blockId="neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
         //% weight=59
         //% parts="neopixel" advanced=true
-        setBrightness(brightness: number): void {
+        setBrigthness(brightness: number): void {
             this.brightness = brightness & 0xff;
         }
 
@@ -275,25 +275,6 @@ namespace neopixel {
             this.pin = pin;
             pins.digitalWritePin(this.pin, 0);
             // don't yield to avoid races on initialization
-        }
-
-        /**
-         * Estimates the electrical current (mA) consumed by the current light configuration.
-         */
-        //% weight=9 blockId=neopixel_power block="%strip|power (mA)"
-        //% advanced=true
-        power(): number {
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            const end = this.start + this._length;
-            let p = 0;
-            for (let i = this.start; i < end; ++i) {
-                const ledoffset = i * stride;
-                for (let j = 0; j < stride; ++j) {
-                    p += this.buf[i + j];
-                }
-            }
-            return this.length() / 2 /* 0.5mA per neopixel */
-                + (p * 433) / 10000; /* rought approximation */
         }
 
         private setBufferRGB(offset: number, red: number, green: number, blue: number): void {
@@ -394,7 +375,7 @@ namespace neopixel {
         strip.start = 0;
         strip._length = numleds;
         strip._mode = mode;
-        strip.setBrightness(255)
+        strip.setBrigthness(255)
         strip.setPin(pin)
         return strip;
     }

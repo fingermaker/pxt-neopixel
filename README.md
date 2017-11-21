@@ -11,23 +11,23 @@ separately.
 ```blocks
 // Create a NeoPixel driver - specify the pin, number of LEDs, and the type of 
 // the NeoPixel srip, either standard RGB (with GRB or RGB format) or RGB+White.
-let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB);
+let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB)
 
 // set pixel colors
-strip.setPixelColor(0, NeoPixelColors.White); // white
-strip.setPixelColor(1, 0xff0000);     // red
-strip.setPixelColor(2, 0x00ff00);     // green
-strip.setPixelColor(3, NeoPixelColors.Blue);    // blue
+strip.setPixelColor(0, 255, 255, 255) // white
+strip.setPixelColor(1, 255, 0, 0)     // red
+strip.setPixelColor(2, 0, 255, 0)     // green
+strip.setPixelColor(3, 0, 0, 255)     // blue
 
 // send the data to the strip
 strip.show()
 ```
 
-Use ``||setBrightness||`` to lower the brightness (it's maxed out by default).
+Use `strip.setBrigthness()` to lower the brightness (it's maxed out by default).
 
-Use ``||shift||`` or ``||rotate||`` to shift the lights around.
+Use `strip.shift()` or `strip.rotate()` to shift the lights around.
 
-Use ``||setPixelWhiteLED||`` to set brightness of the white pixel for RGB+W strips. 
+Use `strip.setPixelWhiteLED()` to set brightness of the white pixel for RGB+W strips. 
 
 ## HSL color format
 
@@ -45,27 +45,15 @@ This little program will let the position of the microbit control the color of t
 This first LED will then get shifted further away every 100ms.
 
 ```blocks
-let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB_RGB)
+let strip = neopixel.create(DigitalPin.P0, 24)
 while (true) {
-    let x = input.acceleration(Dimension.X) / 2;
-    let y = input.acceleration(Dimension.Y) / 2;
-    let z = input.acceleration(Dimension.Z) / 2;
-    strip.setPixelColor(0, neopixel.rgb(x, y, -z));
+    let x = input.acceleration(Dimension.X) / 2
+    let y = input.acceleration(Dimension.Y) / 2
+    let z = input.acceleration(Dimension.Z) / 2
+    strip.setPixelColor(0, x, y, -z);
     strip.shift(1);
     strip.show();
     basic.pause(100);
-}
-```
-
-## Power estimate
-
-Call ``writePowerToSerial`` to print an estimate of the current used by the pixels for the given colors.
-
-```blocks
-let strip = neopixel.create(DigitalPin.P0, 24, NeoPixelMode.RGB_RGB)
-while(true) {
-    strip.show();
-    strip.writePowerToSerial();
 }
 ```
 
@@ -77,7 +65,7 @@ This program uses HSL colors to display an animated rainbow pattern along the fi
 // setup
 let stripLen = 12;
 let np = neopixel.create(DigitalPin.P0, stripLen, NeoPixelMode.RGB)
-np.setBrightness(10)
+np.setBrigthness(10)
 
 // compute colors in HSL, store colors in RGB
 let colors: number[] = [];
