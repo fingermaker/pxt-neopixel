@@ -1,4 +1,4 @@
-{
+{{
   "NeoPixelMode.RGB|block": "RGB",
   "NeoPixelMode.RGBW|block": "RGB+W",
   "NeoPixelMode.RGB_RGB|block": "RGB",
@@ -8,7 +8,7 @@
   "NeoPixelColors.Green|block": "绿",
   "NeoPixelColors.Blue|block": "蓝",
   "NeoPixelColors.Indigo|block": "青",
-  "NeoPixelColors.Violet|block": "紫罗兰",
+  "NeoPixelColors.Violet|block": "青紫",
   "NeoPixelColors.Purple|block": "紫",
   "NeoPixelColors.White|block": "白",
   "neopixel.Strip.showColor|block": "将%strip|整个颜色设定为%rgb=neopixel_colors",
@@ -22,8 +22,8 @@
   "neopixel.Strip.setBrightness|block": "%strip|的亮度为%brightness",
   "neopixel.Strip.easeBrightness|block": "%strip|按设定的亮度调整",
   "neopixel.Strip.range|block": "%strip|从%start|到%length|个LED",
-  "neopixel.Strip.shift|block": "%strip|从%offset|个循环显示",
-  "neopixel.Strip.rotate|block": "%strip|从%offset|个显示（只循环一次）",
+  "neopixel.Strip.shift|block": "%strip|从%offset|个开始循环显示",
+  "neopixel.Strip.rotate|block": "%strip|从%offset|个开始显示（只循环一次）",
   "neopixel.create|block": "端口%pin|连接有|%numleds|个LED（模式是%mode|）",
   "neopixel.rgb|block": "RGB（红%red|绿%green|蓝%blue|）",
   "neopixel.colors|block": "%color",
