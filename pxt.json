@@ -1,6 +1,6 @@
 {
     "name": "neopixel",
-    "version": "0.3.4",
+    "version": "0.3.10",
     "description": "AdaFruit NeoPixel driver",
     "license": "MIT",
     "dependencies": {
@@ -10,7 +10,7 @@
         "README.md",
         "neopixel.ts",
         "sendbuffer.asm",
-		"_locales/cn/neopixel-strings.json"
+        "_locales/cn/neopixel-strings.json"
     ],
     "testFiles": [
         "neotest.ts"

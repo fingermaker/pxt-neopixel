@@ -1,4 +1,4 @@
-{{
+{
   "NeoPixelMode.RGB|block": "RGB",
   "NeoPixelMode.RGBW|block": "RGB+W",
   "NeoPixelMode.RGB_RGB|block": "RGB",
