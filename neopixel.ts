@@ -196,6 +196,7 @@ namespace neopixel {
             this.brightness = brightness & 0xff;
         }
 
+
         /**
          * Apply brightness to current colors using a quadratic easing function.
          **/
