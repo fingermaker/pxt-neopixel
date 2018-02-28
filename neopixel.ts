@@ -192,10 +192,9 @@ namespace neopixel {
         //% blockId="neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
         //% weight=59
         //% parts="neopixel" advanced=true
-        setBrightness(brightness: number): void {
+        setBrigthness(brightness: number): void {
             this.brightness = brightness & 0xff;
         }
-
 
         /**
          * Apply brightness to current colors using a quadratic easing function.
