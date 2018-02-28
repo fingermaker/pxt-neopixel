@@ -17,7 +17,7 @@
   "neopixel.Strip.setPixelColor|block": "%strip|的%pixeloffset|个LED颜色设定为%rgb=neopixel_colors",
   "neopixel.Strip.setPixelWhiteLED|block": "%strip|的%pixeloffset|个LED的白色设定为%white",
   "neopixel.Strip.show|block": "%strip|显示设定的内容",
-  "neopixel.Strip.clear|block": "%strip|消除LED等",
+  "neopixel.Strip.clear|block": "%strip|消除LED显示命令",
   "neopixel.Strip.length|block": "%strip|LED的个数",
   "neopixel.Strip.setBrightness|block": "%strip|的亮度为%brightness",
   "neopixel.Strip.easeBrightness|block": "%strip|按设定的亮度调整",
