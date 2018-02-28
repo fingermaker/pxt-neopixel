@@ -1,4 +1,4 @@
-{
+﻿{
   "NeoPixelMode.RGB|block": "RGB",
   "NeoPixelMode.RGBW|block": "RGB+W",
   "NeoPixelMode.RGB_RGB|block": "RGB",
@@ -14,12 +14,12 @@
   "neopixel.Strip.showColor|block": "将%strip|整个颜色设定为%rgb=neopixel_colors",
   "neopixel.Strip.showRainbow|block": "将%strip|设定为彩虹模式（色值从%startHue|到%endHue|）",
   "neopixel.Strip.showBarGraph|block": "%strip|柱状显示最小%value|最大%high",
-  "neopixel.Strip.setPixelColor|block": "%strip|的%pixeloffset|个LED颜色设定为%rgb=neopixel_colors",
-  "neopixel.Strip.setPixelWhiteLED|block": "%strip|的%pixeloffset|个LED的白色设定为%white",
+  "neopixel.Strip.setPixelColor|block": "将%strip|的第%pixeloffset|个LED颜色设定为%rgb=neopixel_colors",
+  "neopixel.Strip.setPixelWhiteLED|block": "%strip|的第%pixeloffset|个LED的亮度设定为%white",
   "neopixel.Strip.show|block": "%strip|显示设定的内容",
-  "neopixel.Strip.clear|block": "%strip|消除LED等",
-  "neopixel.Strip.length|block": "%strip|LED的个数",
-  "neopixel.Strip.setBrightness|block": "%strip|的亮度为%brightness",
+  "neopixel.Strip.clear|block": "%strip|清除前面的LED命令",
+  "neopixel.Strip.length|block": "设置%strip|LED的个数",
+  "neopixel.Strip.setBrightness|block": "设置%strip|的亮度为%brightness",
   "neopixel.Strip.easeBrightness|block": "%strip|按设定的亮度调整",
   "neopixel.Strip.range|block": "%strip|从%start|到%length|个LED",
   "neopixel.Strip.shift|block": "%strip|从%offset|个开始循环显示",
