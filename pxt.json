@@ -8,9 +8,9 @@
     },
     "files": [
         "README.md",
-        "neopixel.ts",
+        "neopixel2.ts",
         "sendbuffer.asm",
-		"_locales/zh/neopixel-strings.json"
+		"_locales/zh/neopixel-strings2.json"
     ],
     "testFiles": [
         "neotest.ts"
