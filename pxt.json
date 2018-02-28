@@ -1,16 +1,16 @@
 {
     "name": "neopixel",
-    "version": "0.6.2",
+    "version": "0.4.3",
     "description": "AdaFruit NeoPixel driver",
     "license": "MIT",
     "dependencies": {
-        "core": "*",
-        "ws2812b": "github:Microsoft/pxt-ws2812b#v0.0.4"
+        "core": "*"
     },
     "files": [
         "README.md",
         "neopixel.ts",
-        "_locales/zh/neopixel-strings.json"
+        "sendbuffer.asm",
+        "_locales/ja/neopixel-strings.json"
     ],
     "testFiles": [
         "neotest.ts"
