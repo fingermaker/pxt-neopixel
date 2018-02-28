@@ -16,11 +16,15 @@
         "taskName": "deploy",
         "isBuildCommand": true,
         "problemMatcher": "$tsc",
-        "args": []
+        "args": ["deploy"]
     }, {
         "taskName": "build",
         "isTestCommand": true,
         "problemMatcher": "$tsc",
-        "args": []
+        "args": ["build"]
+    }, {
+        "taskName": "publish",
+        "problemMatcher": "$tsc",
+        "args": ["publish"]
     }]
 }
